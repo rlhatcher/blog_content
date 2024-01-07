@@ -1,0 +1,33 @@
+---
+slug: rover-return
+title: The Rover Returns
+description: Why am I building the V2 JPL Open Source Rover?
+tags:
+  - robot
+  - rover
+date: 2023-10-23
+image: opensource-rover/climbing
+project: opensource-rover
+---
+# I Learned so much buildiung the first one
+
+And a bit of text for context
+
+## smaller heading
+
+* one thing
+* another
+
+<Video id='Vp9dJ5upceo' caption='Rover demo'/>
+
+```JavaScript
+export async function generateStaticParams() {
+  const posts = await getPostsMeta();
+
+  if (!posts) return []
+
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
+}
+```
