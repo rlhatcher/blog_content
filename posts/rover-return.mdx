@@ -19,15 +19,3 @@ And a bit of text for context
 * another
 
 <Video id='Vp9dJ5upceo' caption='Rover demo'/>
-
-```JavaScript
-export async function generateStaticParams() {
-  const posts = await getPostsMeta();
-
-  if (!posts) return []
-
-  return posts.map((post) => ({
-    slug: post.slug,
-  }));
-}
-```
