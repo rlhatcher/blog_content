@@ -1,0 +1,79 @@
+connectors:
+  F:
+    style: simple
+    type: Ferrule
+    color: RD
+  SW1:
+    type: Wizard
+    subtype: screw
+    pinlabels: [com, pwr]    
+  FC1:
+    type: Trullock
+    subtype: Grissom
+    pinlabels: [CH1+, CH1-, CH2+, CH2-, BATT+, BATT-, DBATT+, DBATT-]
+  FC2:
+    type: Perfect Flite
+    subtype: Stratologger
+    pinlabels: [SW+, SW-, BATT+, BATT-, MAIN+, MAIN-, DROGUE+, DROGUE-]
+  CH1:
+    type: charge
+    subtype: main
+    pinlabels: [CH1+, CH1-]
+  CH2:
+    type: charge
+    subtype: drogue
+    pinlabels: [CH1+, CH1-]
+  BATT:
+    type: battery
+    subtype: LiPo
+    pinlabels: [BATT+, BATT-]
+  DBATT:
+    type: battery
+    subtype: LiPo
+    pinlabels: [DBATT+, DBATT-]
+  LIPO:
+    type: battery
+    subtype: LiPo
+    pinlabels: [LIP+, LIP-]
+
+cables:
+  W:
+    gauge: 0.5 mm2
+    length: 0.2
+    color_code: IEC
+    wirecount: 2
+    shield: false
+
+connections:
+  - 
+    - SW1: [1,2]
+    - W.W1: [1,2]
+    - FC2: [1,2]
+  -
+    - FC1: [1,2]
+    - W.W2: [1,2]
+    - CH1: [1,2]
+  - 
+    - FC1: [3,4]
+    - W.W3: [1,2]
+    - CH2: [1,2]
+  -
+    - FC1: [5,6]
+    - W.W4: [1,2]
+    - BATT: [1,2]
+  -
+    - FC1: [7,8]
+    - W.W5: [1,2]
+    - DBATT: [1,2]
+  -
+    - FC2: [3,4]
+    - W.W6: [1,2]
+    - LIPO: [1,2]
+  -
+    - FC2: [5,6]
+    - W.W7: [1,2]
+    - CH1: [1,2]
+  -
+    - FC2: [7,8]
+    - W.W8: [1,2]
+    - CH2: [1,2]
