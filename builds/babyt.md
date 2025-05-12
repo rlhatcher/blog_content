@@ -4,7 +4,7 @@ slug: babyt
 designId: babyt
 description: |
   Full scale model of the Baby-T rocket.
-date: "09-JAN-2025"
+date: '09-JAN-2025'
 project: babyt
 imageWidth: 1280
 imageHeight: 1036
@@ -12,3 +12,27 @@ image: bfhpr/2024-05-04_13-03-55_350_wyxqcv
 tags:
   - certification
 ---
+
+## Avionics
+
+The avionics carrys three altimeters, 4 2S LiPo batteries and a 1S LiPo battery. The 1S battery powers the staging timer.
+
+| Device       | Purpose          | Notes                                              |
+| ------------ | ---------------- | -------------------------------------------------- |
+| EasyTimer    | Stage Ignition   | tilt detection and timer for stage ignition        |
+| StratoLogger | Primary Recovery | Main altimeter, 2S lipo with resistor for charge   |
+| Grissom      | Backup Recovery  | Backup altimeter, dedicated 2S battery for charges |
+
+### Altus Metrum EasyTimer
+
+The EasyTimer is a staging timer that uses tilt detection and other parameters to determine when to safely ignite the second stage. It is powered by a 1S LiPo battery and has a 2S LiPo battery for the charges.
+
+from the EasyTimer manual
+
+> As described above, using an external pyro battery involves connecting the negative battery terminal to the flight computer ground, connecting the positive battery terminal to one of the igniter leads and connecting the other igniter lead to the per-channel pyro circuit connection.
+>
+> To connect the negative pyro battery terminal to EasyTimer ground, connect it to the negative external battery connection, top terminal 4.
+>
+> Connecting the switched positive battery terminal to the pyro charges must be done separate from EasyTimer, by soldering them together or using some other connector. Note that for safety, you must put a switch between the pyro battery and the rest of the circuit!'
+>
+> The other lead from each pyro charge is then inserted into the appropriate per-pyro channel screw terminal (top terminal 1 for pyro channel A charge, bottom terminal 1 for pyro channel B charge).
