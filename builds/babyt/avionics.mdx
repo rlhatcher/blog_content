@@ -1,0 +1,58 @@
+---
+weight: 4
+title: Avionics
+slug: avionics
+description: |
+  Building the Baby-T is much like a puzzle-box. Fitting electronics into the middle is a challenge
+date: 2025-03-12T19:13:00Z
+tags:
+  - altus-metrum
+  - avionics
+imageWidth: 1024
+imageHeight: 1024
+image: baby/build/avbay-spine_oxrxa4
+---
+The avionics bay is designed to fit into the middle of the rocket, with a
+spine that runs through the center. This allows for easy access to the avionics 
+and provides a stable platform for the altimeters and batteries.
+
+The steel rod spine provides support for the 3D printed sled and also rigidity
+to support the recovery system.
+
+The avionics bay has M5 lifting eye attachments points forward and aft, which are 
+directly connected by M5 threaded rod.
+
+## Avionics
+
+The avionics carries three altimeters, 4 2S LiPo batteries and a 1S LiPo battery. The 1S battery powers the staging timer.
+
+| Device       | Purpose          | Notes                                              |
+| ------------ | ---------------- | -------------------------------------------------- |
+| EasyTimer    | Stage Ignition   | tilt detection and timer for stage ignition        |
+| StratoLogger | Primary Recovery | Main altimeter, 2S lipo with resistor for charge   |
+| Grissom      | Backup Recovery  | Backup altimeter, dedicated 2S battery for charges |
+
+### Altus Metrum EasyTimer
+
+The EasyTimer is a staging timer that uses tilt detection and other parameters to determine when to safely ignite the second stage. It is powered by a 1S LiPo battery and has a 2S LiPo battery for the charges.
+
+## Ejection Charges
+
+Charges are held in centrifuge tubes, which are held by a 3D printed well that bolts
+through the bulkhead. This approach allows for easy connection of igniters using
+thumb-friendly connectors and provides a secure way to hold the charges in place.
+
+<VideoPlayer
+  src='baby/build/babyt-hpr-chargewell'
+  loop={false}
+  autoplay={true}
+  controls={true}
+/>
+
+## Gallery
+
+<TagGallery
+  tags={[
+    'babyt-hpr-avionics',
+  ]}
+/>
